@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* ✅ Maintain Existing Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 150px 300px 150px 150px; /* Keep your original structure */
+            grid-template-rows: repeat(4, auto);
+            gap: 15px;
+            max-width: 1100px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .purple { background-color: #6a42f4; color: white; grid-column: 2 / span 2; grid-row: 1 / span 2; }
+        .light-yellow { background-color: hsl(31, 66%, 93%); grid-column: 1; grid-row: 1 / span 2; }
+        .light-purple { background-color: #dfd4fc; grid-column: 4; grid-row: 1 / span 3; }
+        .maintain, .write { background-color: hsl(39, 100%, 71%); }
+        .manage { grid-column: 2; grid-row: 3; }
+        .maintain { grid-column: 3; grid-row: 3; }
+        .write { grid-column: 1; grid-row: 3 / span 4; }
+        .percent { grid-column: 2; grid-row: 4 / span 3; }
+        .grow { grid-column: 3 / span 4; grid-row: 4 / span 4; background-color: #6a42f4; color: white; }
+
+        h2, h3 { font-size: 1.4em; }
+        p { font-size: 1em; }
+
+        /* 🌟 Responsive Adjustments */
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for tablets */
+            }
+            .purple { grid-column: span 2; grid-row: auto; }
+            .light-purple { grid-column: span 2; grid-row: auto; }
+            .grow { grid-column: span 2; grid-row: auto; }
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Switch to 1 column for small screens */
+            }
+            .purple {
+                grid-column: span 1;
+                grid-row: auto;
+                order: -1; 
+            }
+            .light-yellow, .light-purple, .manage, .maintain, .write, .percent, .grow {
+                grid-column: span 1;
+                grid-row: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card purple">
+            <h2>Social Media <strong>10x Faster</strong> with AI</h2>
+            <p>⭐⭐⭐⭐⭐ Over 4,000 5-star reviews</p>
+        </div>
+        <div class="card light-yellow">
+            <h3>Create and schedule content <i>quicker.</i></h3>
+            <button>Create Post</button>
+        </div>
+        <div class="card light-purple">
+            <h3>Schedule to social media.</h3>
+            <p>Best Time to Post</p>
+        </div>
+        <div class="card manage">
+            <h3>Manage multiple accounts and platforms.</h3>
+        </div>
+        <div class="card maintain">
+            <h3>Maintain a consistent <br> posting schedule.</h3>
+        </div>
+        <div class="card write">
+            <h3>Write your content using AI.</h3>
+        </div>
+        <div class="card percent">
+            <h3>>56% faster audience growth</h3>
+        </div>
+        <div class="card grow">
+            <h3>Grow followers with <br> non-stop content.</h3>
+        </div>
+    </div>
+</body>
+</html>
